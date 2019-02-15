@@ -6,12 +6,35 @@ package com.myspace.test_task_list;
 
 public class Person implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Person() {
-    }
+	@org.kie.api.definition.type.Label(value = "Name")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "Surname")
+	private java.lang.String surname;
 
+	public Person() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.String getSurname() {
+		return this.surname;
+	}
+
+	public void setSurname(java.lang.String surname) {
+		this.surname = surname;
+	}
+
+	public Person(java.lang.String name, java.lang.String surname) {
+		this.name = name;
+		this.surname = surname;
+	}
 
 }
